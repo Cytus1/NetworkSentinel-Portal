@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Network Sentinel Portal </title>
+    <meta charset = "UTF-8">
+
+    <link rel = "shortcut icon" href = "pics/relimghref.png" >
+
+    <!-- css -->
+    <link href = "style/home.css" rel = "stylesheet" type = "text/css">
+
+    <!-- changed version on 10-20-2022 from 16.3.1 to 18 for react and react-dom -->
+    <script src='https://unpkg.com/react@18/umd/react.production.min.js'></script>
+    <script src='https://unpkg.com/react-dom@18/umd/react-dom.production.min.js'></script>
+
+    <!-- CDN for JSX -->
+    <script src='https://unpkg.com/babel-standalone@6.26.0/babel.js'></script>
+
+    <!-- CDN for React Routing -->
+    <script src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
+
+</head>
+
+
+<body>
+    <div id = "root"></div>
+
+    <!-- Put JS reusable first -->
+
+    <!-- JS Content Generating functions -->
+
+    <!-- React reusable (call by CGF) -->
+
+    <!-- React Content Generating functions (called by the router) -->
+    <script type = "text/babel" src = "_React_CGF/homeR_CGF.js"></script>
+
+    <!-- React scripts (have JSX) ; script type="text/babel" -->
+    <script type = "text/babel">
+        "use strict";
+
+        const Link  = ReactRouterDOM.Link;
+        const Route = ReactRouterDOM.Route;
+
+        const App = () => (
+            <ReactRouterDOM.HashRouter>
+                <div id = "titleNav">
+                    <div id = "title">
+                        Network Sentinel Portal
+                    </div>
+
+                    <div id = "content">
+                        <Route exact path = "/" component = {homeR_CGF}/>
+                        <Route path = "/home"   component = {homeR_CGF}/>
+                    </div>
+                
+                </div>
+            </ReactRouterDOM.HashRouter>
+        );
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+
+</body>
+
+</html>
+
+
