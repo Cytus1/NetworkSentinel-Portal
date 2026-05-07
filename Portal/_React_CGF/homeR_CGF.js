@@ -1,13 +1,29 @@
 function homeR_CGF() {
     return (
         <div className = "home">
-            <h4>
-                Network Sentinel Portal
-            </h4>
+            <header className = "navbar">
+                <div className = "portal-title">
+                    Network Sentinel Portal
+                </div>
 
-            <p>
-                Welcome!
-            </p>
+                <div className = "nav-links">
+                    <a className = "nav-link" href = "#">Home</a>
+                    <a className = "nav-link" href = "#">Network Info</a>
+                    <a className = "nav-link" href = "#">AI Analytics</a>
+                </div>
+
+            </header>
+
+            <div className = "intro">
+                <h4>
+                    WOW
+                </h4>
+
+                <p>
+                    Welcome!
+                </p>
+            </div>
+
         </div>
 
     )
