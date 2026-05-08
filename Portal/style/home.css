@@ -33,6 +33,7 @@ body {
 .nav-links {
     display: flex;
     gap: 24px;
+    padding: 2%;
     align-items: center;
 }
 
@@ -52,6 +53,11 @@ body {
 }
 
 .portal-title {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+
     color: white;
 
     font-size: 20px;
@@ -61,4 +67,126 @@ body {
     text-transform: uppercase;
 
     white-space: nowrap;
+}
+
+.card {
+    overflow: hidden;
+}
+
+.card-img {
+    width: 100%;
+    max-width: 180px;
+    height: auto;
+    display: block;
+}
+
+
+/* --- */
+
+:root {
+    --rotate-speed: 40;
+    --count: 8;
+    --easing: cubic-bezier(0.000, 0.33, 1.000, 0.65);
+}
+
+.void {
+    width: 100%;
+    max-width: 1024px;
+    margin: auto;
+    position: relative;
+    aspect-ratio: 1/1;
+}
+
+.crop {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1/1;
+    z-index: 1;
+}
+
+.card-list li {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    animation: rotateCW calc(var(--rotate-speed) * 1s) var(--easing) infinite;
+}
+
+.card {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 24px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 12px rgba(70, 0, 255, 0.1), 0px 16px 32px rgba(165, 135, 255, 0.1);
+    border-radius: 12px;
+    font: 400 14px sans-serif;
+    overflow: hidden;
+    animation: rotateCCW calc(var(--rotate-speed) * 1s) var(--easing) infinite;
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card a {
+    text-decoration: none;
+    color: unset;
+    display: block;
+    height: 80px;
+    overflow: hidden;
+}
+
+.model-name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 150%;
+    color: #3B2ED0;
+    display: block;
+}
+
+svg {
+    position: absolute;
+    top:  0;
+    left: 0;
+    z-index: 0;
+}
+
+.card-list li:nth-child(2),
+.card-list li:nth-child(2) .card {
+    animation-delay: calc((var(--rotate-speed) / var(--count)) * -1s);
+}
+
+@keyframes rotateCW {
+    from {
+        transform: translateY(-50%) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateCCW {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
 }
