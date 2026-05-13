@@ -19,6 +19,12 @@ body {
     overflow-x: hidden;
 }
 
+:root {
+    --rotate-speed: 40;
+    --count: 12;
+    --easing: cubic-bezier(0.000, 0.33, 1.000, 0.65);
+}
+
 .navbar {
     position: fixed;
     top: 0;
@@ -63,6 +69,32 @@ body {
     transform: translateY(-1px);
 }
 
+.intro {
+    min-height: 100vh;
+    padding-top: 70px;
+    box-sizing: border-box;
+
+    /* color: rgb(255, 255, 255); */
+    background: white;
+    color: black;
+    position: relative;
+}
+
+.spinner-section {
+    min-height: 100vh;
+    padding-top: 70px;
+    box-sizing: border-box;
+
+    background: transparent;
+    color: white;
+    position: relative;
+}
+
+.home-stage {
+    width: 100%;
+    position: relative;
+}
+
 .portal-title {
     display: flex;
     justify-content: center;
@@ -77,21 +109,6 @@ body {
     text-transform: uppercase;
 
     white-space: nowrap;
-}
-
-.intro {
-    min-height: 100vh;
-    padding-top: 70px;
-    box-sizing: border-box;
-
-    color: white;
-    position: relative;
-}
-
-:root {
-    --rotate-speed: 40;
-    --count: 12;
-    --easing: cubic-bezier(0.000, 0.33, 1.000, 0.65);
 }
 
 .void {

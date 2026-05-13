@@ -8,7 +8,7 @@ function toDisplayPanel(data) {
                 text: "A portal to view network activity, packet summaries, and future intrusion detection results"
             };
         },
-        
+
         frontend: function () {
             return {
                 label: "Interface Layer",
@@ -128,153 +128,163 @@ function homeR_CGF() {
                 </div>
             </header>
 
-            <main className = "intro">
-                <div className = "home-stage">
-                    <div className = "void" id = "void">
-                        <div className = "top-white-section">
-                            <div className = "portal-title">
-                                Network Sentinel Portal
-                            </div>
-                        </div>
-
-                        <div className = "left-glass-panel">
-                            <div className = "glass-sharp-edge"></div>
-                        </div>
-
-                        <div className = {panelFade ? "info-panel show" : "info-panel"}>
-
-                            <div className = "info-label">
-                                {panelData[panelIndex].label}
-                            </div>
-
-                            <h1>
-                                {panelData[panelIndex].title}
-                            </h1>
-
-                            <div className = "info-value">
-                                {panelData[panelIndex].value}
-                            </div>
-
-                            <p>
-                                {panelData[panelIndex].text}
-                            </p>
-
-                        </div>
-
-                        <div className = "crop">
-                            <ul className = "card-list" style = {{"--count": 8}}>
-                                <li>
-                                    <div className = "card">
-                                        <a href = "#">
-                                            <span>1046</span>
-                                            <span>Packet Flow</span>
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div className = "card">
-                                        <a href = "#">
-                                            <img className = "card-img" src = "pics/home-black-ice.gif" alt = "" />
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div className = "card">
-                                        <a href = "#">
-                                            <span>AI</span>
-                                            <span>Detection</span>
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div className = "card">
-                                        <a href = "#">
-                                            <img className = "card-img" src = "pics/home-black-ice.gif" alt = "" />
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div className = "card">
-                                        <a href = "#">
-                                            <span>12%</span>
-                                            <span>Risk Score</span>
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div className = "card">
-                                        <a href = "#">
-                                            <img className = "card-img" src = "pics/home-black-ice.gif" alt = "" />
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div className = "card">
-                                        <a href = "#">
-                                            <span>DB</span>
-                                            <span>History</span>
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div className = "card">
-                                        <a href = "#">
-                                            <img className = "card-img" src = "pics/home-black-ice.gif" alt = "" />
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div className = "card">
-                                        <a href = "#">
-                                            <span>C++</span>
-                                            <span>Capture</span>
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div className = "card">
-                                        <a href = "#">
-                                            <img className = "card-img" src = "pics/home-black-ice.gif" alt = "" />
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div className = "card">
-                                        <a href = "#">
-                                            <span>LOG</span>
-                                            <span>Events</span>
-                                        </a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div className = "card">
-                                        <a href = "#">
-                                            <img className = "card-img" src = "pics/home-black-ice.gif" alt = "" />
-                                        </a>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <div className = "last-circle"></div>
-                            <div className = "second-circle"></div>
-                        </div>
-
-                        <div className = "mask"></div>
-                        <div className = "center-circle"></div>
+            <main>
+                <section className = "intro" id = "home">
+                    <div className = "home-stage">
+                        <p>Network Sentinel Portal</p>
                     </div>
-                </div>
+                </section>
+
+                <section className = "spinner-section" id = "spinner-info">
+                    <div className = "home-stage">
+                        <div className = "void" id = "void">
+                            <div className = "top-white-section">
+                                <div className = "portal-title">
+                                    Network Sentinel Portal
+                                </div>
+                            </div>
+
+                            <div className = "left-glass-panel">
+                                <div className = "glass-sharp-edge"></div>
+                            </div>
+
+                            <div className = {panelFade ? "info-panel show" : "info-panel"}>
+
+                                <div className = "info-label">
+                                    {panelData[panelIndex].label}
+                                </div>
+
+                                <h1>
+                                    {panelData[panelIndex].title}
+                                </h1>
+
+                                <div className = "info-value">
+                                    {panelData[panelIndex].value}
+                                </div>
+
+                                <p>
+                                    {panelData[panelIndex].text}
+                                </p>
+
+                            </div>
+
+                            <div className = "crop">
+                                <ul className = "card-list" style = {{"--count": 8}}>
+                                    <li>
+                                        <div className = "card">
+                                            <a href = "#">
+                                                <span>1046</span>
+                                                <span>Packet Flow</span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div className = "card">
+                                            <a href = "#">
+                                                <img className = "card-img" src = "pics/home-black-ice.gif" alt = "" />
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div className = "card">
+                                            <a href = "#">
+                                                <span>AI</span>
+                                                <span>Detection</span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div className = "card">
+                                            <a href = "#">
+                                                <img className = "card-img" src = "pics/home-black-ice.gif" alt = "" />
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div className = "card">
+                                            <a href = "#">
+                                                <span>12%</span>
+                                                <span>Risk Score</span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div className = "card">
+                                            <a href = "#">
+                                                <img className = "card-img" src = "pics/home-black-ice.gif" alt = "" />
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div className = "card">
+                                            <a href = "#">
+                                                <span>DB</span>
+                                                <span>History</span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div className = "card">
+                                            <a href = "#">
+                                                <img className = "card-img" src = "pics/home-black-ice.gif" alt = "" />
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div className = "card">
+                                            <a href = "#">
+                                                <span>C++</span>
+                                                <span>Capture</span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div className = "card">
+                                            <a href = "#">
+                                                <img className = "card-img" src = "pics/home-black-ice.gif" alt = "" />
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div className = "card">
+                                            <a href = "#">
+                                                <span>LOG</span>
+                                                <span>Events</span>
+                                            </a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div className = "card">
+                                            <a href = "#">
+                                                <img className = "card-img" src = "pics/home-black-ice.gif" alt = "" />
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+
+                                <div className = "last-circle"></div>
+                                <div className = "second-circle"></div>
+                            </div>
+
+                            <div className = "mask"></div>
+                            <div className = "center-circle"></div>
+                        </div>
+                    </div>
+                </section>
             </main>
+
+
         </div>
     );
 }
